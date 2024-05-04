@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Thuc Hanh Tong Hop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="imgs/logo (1).png" alt="">
+        <img id="logo2" src="imgs/logo2.png" alt="">
+        <h2 id="siteTitle">Hệ Thống Quản Lý và Đào Tạo</h2>
+    </header>
+    <nav>
+        <a id="menu" href="index1.html">Trang chủ</a>
+        <a id="menu" href="#">Giới thiệu</a>
+        <a id="login" href="login.html" style="margin-right: 10px;">Đăng Nhập</a>
+        <a id="login" href="registration.html" >Đăng Ký</a>
+    </nav>
+    <main>
+        <div id="leftSide">
+            <div class="group-box">
+                <h2 class="title">DANH MỤC</h2>
+                <div class="leftMenu">
+                    <ul>
+                        <li><a href="">Khoa-Viện</a></li>
+                        <li><a href="">Giảng Viên</a></li>
+                        <li><a href="">Sinh Viên</a></li>
+                        <li><a href="">Ngành Đào Tạo</a></li>
+                        <li><a href="">Lớp Chuyên Ngành</a></li>
+                        <li><a href="">Lớp Học Phần</a></li>
+                        <li><a href="">Môn Học</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="group-box">
+                <h2 class="title">MENU</h2>
+                <div class="leftMenu">
+                    <ul>
+                        <li><a href="">LINK 1</a></li>
+                        <li><a href="">LINK 2</a></li>
+                        <li><a href="">LINK 3</a></li>
+                        <li><a href="">LINK 4</a></li>
+                        <li><a href="">LINK 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mainContent">
+            <div class="group-box">
+                <h3 class="title" style="color: white;">Thông tin Đăng ký</h3>
+                <form action="/action_page.php" style="margin-left: 250px;">
+                    <table>
+                        <tr>
+                            <td><label for="MSSV"><b>MSSV</b></label></td>
+                            <td>
+                                <input type="text" maxlength="8" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Họ và tên</label></td>
+                            <td>
+                                <input type="text" minlength="8" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="sex">Giới tính</label></td>
+                            <td>
+                                <input checked type="radio" name="type" value="1">
+                                <label for="sex">Nam</label>
+                                <input type="radio" name="type" value="2">
+                                <label for="sex">Nữ</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="birthday">Ngày sinh</label></td>
+                            <td>
+                                <input type="date" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="country">Quê quán</label>
+                            </td>
+                            <td>
+                                <input type="text" minlength="8" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="numberphone">SĐT</label>
+                            </td>
+                            <td>
+                                <input type="number" maxlength="10" minlength="10" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                            <input id="email" type="text" placeholder="minh@gmail.com" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="avatar">Ảnh đại diện</label></td>
+                        <td>
+                            <input type="file" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw"><b>Mật Khẩu</b></label>
+                        </td>
+                        <td>
+                            <input id="psw" type="password" placeholder="Vui lòng nhập mật khẩu" minlength="8" name="psw" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                        </td>
+                        <td>
+                            <input id="psw-repeat" type="password" placeholder="Vui lòng nhập lại mật khẩu" minlength="8" name="psw-repeat" required oninput="checkPasswordMatch()">
+                                <div id="passwordMatchMessage"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script>
+        function checkPasswordMatch() {
+            var password = document.getElementById("psw").value;
+            var confirmPassword = document.getElementById("psw-repeat").value;
+
+            if (password !== confirmPassword) {
+                document.getElementById("passwordMatchMessage").innerHTML = "Mật khẩu không khớp!";
+            } else {
+                document.getElementById("passwordMatchMessage").innerHTML = "";
+            }
+        }
+    </script>
+</body>

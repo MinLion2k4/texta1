@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Thuc Hanh Tong Hop</title>
+    <script src="json.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="imgs/logo (1).png" alt="">
+        <img id="logo2" src="imgs/logo2.png" alt="">
+        <h2 id="siteTitle">Hệ Thống Quản Lý và Đào Tạo</h2>
+    </header>
+    <nav>
+        <a id="menu" href="index1.html">Trang chủ</a>
+        <a id="menu" href="#">Giới thiệu</a>
+        <a id="login" href="login.html" style="margin-right: 10px;">Đăng Nhập</a>
+        <a id="login" href="registration.html" >Đăng Ký</a>
+    </nav>
+    <main>
+        <div id="leftSide">
+            <div class="group-box">
+                <h2 class="title">DANH MỤC</h2>
+                <div class="leftMenu">
+                    <ul>
+                        <li><a href="">Khoa-Viện</a></li>
+                        <li><a href="">Giảng Viên</a></li>
+                        <li><a href="">Sinh Viên</a></li>
+                        <li><a href="">Ngành Đào Tạo</a></li>
+                        <li><a href="">Lớp Chuyên Ngành</a></li>
+                        <li><a href="">Lớp Học Phần</a></li>
+                        <li><a href="">Môn Học</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="group-box">
+                <h2 class="title">MENU</h2>
+                <div class="leftMenu">
+                    <ul>
+                        <li><a href="">LINK 1</a></li>
+                        <li><a href="">LINK 2</a></li>
+                        <li><a href="">LINK 3</a></li>
+                        <li><a href="">LINK 4</a></li>
+                        <li><a href="">LINK 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mainContent">
+            <div class="group-box">
+                <h3 class="title">Đăng nhập</h3>
+                <form action="#" style="margin-left: 250px;" id="loginForm" onsubmit="return validateLogin()">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="MSSV">Username</label>
+                            </td>
+                            <td>
+                                <input id="username" type="text" maxlength="8" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="pws">Password</label>
+                            </td>
+                            <td>
+                                <input id="password" type="password" minlength="8" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" name="dfoget" id="remember"  >
+                                <label for="checkbox">Lưu thông tin đăng nhập</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Đăng nhập">
+                                <input type="reset" value="Hủy">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
